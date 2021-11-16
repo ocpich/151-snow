@@ -7,6 +7,8 @@
  * @version   16.11.2021
  */
 
+ob_start();
+$title = "Connectez-vous";
 ?>
 
 <!-- login page -->
@@ -36,3 +38,6 @@
     </div>
 </section>
 
+<?php
+$content = ob_get_clean();
+require "gabarit.php";
