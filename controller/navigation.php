@@ -22,3 +22,11 @@ function lost()
 {
     require "view/lost.php";
 }
+
+/**
+ * @brief This function is designed to xxxxx
+ */
+function login()
+{
+    require "view/contact.php";
+}
