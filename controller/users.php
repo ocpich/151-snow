@@ -31,3 +31,7 @@ function login(){
         require 'view/login.php';
     }
 }
+
+function logout(){
+    session_destroy();
+}

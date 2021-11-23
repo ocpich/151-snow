@@ -94,7 +94,12 @@
                         </li>
 
                         <li>
-                            <a href="index.php?action=login">Login</a>
+                            <?php if(isset($_SESSION['email'])){
+                                echo '<a href="index.php?action=logout">Logout</a>';
+                            }else{
+                                echo '<a href="index.php?action=login">Login</a>';
+                            }
+                            ?>
                         </li>
 
                     </ul>
@@ -132,18 +137,19 @@
 							Livraison gratuite dès 200.-
 						</span>
                 </li>
-                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 
-                        <span class="topbar-child1">
                             <?php
                             if(isset($_SESSION['email'])){
+                                echo '<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+                                    <span class="topbar-child1">';
                                 echo $_SESSION['email'];
+                              echo '</span>';
                             }else{
                                 echo '';
                             }
 
                             ?>
-                        </span>
+
 
                 </li>
 
@@ -162,8 +168,17 @@
                     <a href="index.php">Accueil</a>
                 </li>
 
+
                 <li class="item-menu-mobile">
-                    <a href="index.php?action=login">Login</a>
+
+                    <?php if(isset($_SESSION['email'])){
+                        echo '<a href="index.php?action=logout">Logout</a>';
+                    }else{
+                        echo '<a href="index.php?action=login">Login</a>';
+                    }
+                    ?>
+
+
                 </li>
 
             </ul>
