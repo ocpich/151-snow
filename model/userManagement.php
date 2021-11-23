@@ -8,12 +8,13 @@
  */
 
 
-function checkLogin(){
+function checkLogin($data){
+
     $userFile = file_get_contents("model/users.json");
     $tabUserJson = json_decode($userFile, true);
 
-    $email = $_POST['email'];
-    $pwd = $_POST['userPswd'];
+    $email = $data['email'];
+    $pwd = $data['userPswd'];
 
     foreach ($tabUserJson as $key => $tabUserJsonValues ){
             foreach ($tabUserJsonValues as $entries => $tabLogins){

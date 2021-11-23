@@ -12,12 +12,12 @@ require 'model/userManagement.php';
 /**
  * @brief this function is designed to display the login form
  */
-function login(){
+function login($data){
     // check if email & pwd is set and if we come from login page
-    if(isset($_POST['email']) && isset($_POST['userPswd'])){
+    if(isset($data['email']) && isset($data['userPswd'])){
 
-        if(checkLogin()){
-            $_SESSION['email'] = $_POST['email'];
+        if(checkLogin($data)){
+            $_SESSION['email'] = $data['email'];
             require 'view/home.php';
 
         }else{
