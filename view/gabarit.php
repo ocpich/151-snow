@@ -64,9 +64,16 @@
 					Livraison gratuite dès 200.-
             </span>
             <div class="topbar-child1">
-					<span class="topbar-email">
-						pascal.benzonana@cpnv.ch
-					</span>
+					 <span class="topbar-child1">
+                            <?php
+                            if(isset($_SESSION['email'])){
+                                echo $_SESSION['email'];
+                            }else{
+                                echo '';
+                            }
+
+                            ?>
+                        </span>
             </div>
 
 
@@ -128,7 +135,14 @@
                 <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 
                         <span class="topbar-child1">
-                            pascal.benzonana@cpnv.ch
+                            <?php
+                            if(isset($_SESSION['email'])){
+                                echo $_SESSION['email'];
+                            }else{
+                                echo '';
+                            }
+
+                            ?>
                         </span>
 
                 </li>

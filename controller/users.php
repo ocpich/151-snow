@@ -18,6 +18,8 @@ function login(){
     if(isset($_POST['email']) && isset($_POST['userPswd'])){
 
         if(checkLogin()){
+            $_SESSION['email'] = $_POST['email'];
+
             require 'view/home.php';
             echo 'email set';
         }else{
