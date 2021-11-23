@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file      index.php
  * @brief     This file is the rooter managing the link with controllers.
