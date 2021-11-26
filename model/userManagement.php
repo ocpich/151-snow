@@ -17,13 +17,16 @@ function checkLogin($data){
     $query="SELECT userEmailAddress FROM users WHERE userEmailAddress=:femail and userHashPsw = :fpwd ";
 
     $params = array(':femail' => $userEmailAddress, ':fpwd' =>$userHashPsw);
-    $name = executeQuerySelect($query,$params);
+    $dataDB = executeQuerySelect($query,$params);
 
-    if($name == $data['email']){
+    if($dataDB !=null){
         return true;
     }else{
         return false;
     }
+
+
+
 
 
     /*
