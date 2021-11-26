@@ -7,8 +7,26 @@
  * @version   19.11.2021
  */
 
+require "dbConnector.php";
 
 function checkLogin($data){
+
+    $userEmailAddress = $data['email'];
+    $userHashPsw = $data['userPswd'];
+
+    $query="SELECT userEmailAddress FROM users WHERE userEmailAddress=:femail and userHashPsw = :fpwd ";
+
+    $params = array(':femail' => $userEmailAddress, ':fpwd' =>$userHashPsw);
+    $name = executeQuerySelect($query,$params);
+
+    if($name == $data['email']){
+        return true;
+    }else{
+        return false;
+    }
+
+
+    /*
 
     $userFile = file_get_contents("model/users.json");
     $tabUserJson = json_decode($userFile, true);
@@ -28,6 +46,7 @@ function checkLogin($data){
     }
 
     return false;
+    */
 
 
 }
