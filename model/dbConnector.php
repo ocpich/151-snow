@@ -20,7 +20,6 @@ function openDBConnexion()
     $sqlDriver = 'mysql';
     $hostname = 'localhost';
     $port = 3306;
-    //$port = 880;
     $charset = 'utf8';
     $dbName = 'snows';
     $userName = 'SNOW'; //to change

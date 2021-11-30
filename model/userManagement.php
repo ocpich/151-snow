@@ -25,10 +25,6 @@ function checkLogin($data){
         return false;
     }
 
-
-
-
-
     /*
 
     $userFile = file_get_contents("model/users.json");
