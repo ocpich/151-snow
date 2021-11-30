@@ -12,7 +12,7 @@ $title = "SnowPoint . articles";
 ?>
 
     <!-- Title Page -->
-    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(content/images/heading-pages-02.jpg);">
+    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);">
         <h2 class="l-text2 t-center">
             Nos Snow
         </h2>
@@ -54,7 +54,9 @@ $title = "SnowPoint . articles";
                         </a>
 
                         <span class="block2-price m-text6 p-r-5">
-                            CHF <?php echo $art["price"] ?>.00
+
+
+                            CHF <?php  echo number_format( $art["price"],2) ?>
                         </span>
                     </div>
 
