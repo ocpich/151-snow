@@ -11,6 +11,7 @@
 
 require "controller/navigation.php";
 require "controller/users.php";
+require "controller/articles.php";
 
 
 if (isset($_GET['action'])) {
@@ -21,6 +22,9 @@ if (isset($_GET['action'])) {
             break;
         case 'login':
             login($_POST);
+            break;
+        case 'articles':
+            displayArticles();
             break;
         case 'logout':
             logout();
