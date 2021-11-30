@@ -14,7 +14,7 @@ $title = "SnowPoint . articles";
 
 
 <!-- Product -->
-    <div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+    <div class="col-sm-6 col-md-8 col-lg-9 p-b-50 mx-auto">
 
         <div class="row">
 

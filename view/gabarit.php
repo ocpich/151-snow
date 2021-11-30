@@ -91,9 +91,10 @@
                     <ul class="main_menu">
                         <li>
                             <a href="index.php">Accueil</a>
+
                         </li>
+                        <li><a href="index.php?action=articles">Articles</a></li>
                         <?php if(isset($_SESSION['email'])){
-                            echo '<li><a href="index.php?action=articles">Articles</a></li>';
                             echo '<li><a href="index.php?action=logout">Logout</a></li>';
 
                         }else{
@@ -174,9 +175,10 @@
                 <li class="item-menu-mobile">
                     <a href="index.php">Accueil</a>
                 </li>
+                <li class="item-menu-mobile"><a href="index.php?action=articles">Articles</a></li>
                 <?php if(isset($_SESSION['email'])){
-                    echo '<li class="item-menu-mobile"><a href="index.php?action=articles">Articles</a></li>';
-                    echo '< class="item-menu-mobile"><a href="index.php?action=logout">Logout</a></li>';
+                    echo '
+                    <li class="item-menu-mobile"><a href="index.php?action=logout">Logout</a></li>';
 
                 }else{
                     echo '<li class="item-menu-mobile"><a href="index.php?action=login">Login</a></li>';
