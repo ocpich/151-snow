@@ -15,7 +15,6 @@ require 'model/userManagement.php';
 function login($data){
     // check if email & pwd is set and if we come from login page
     if(isset($data['email']) && isset($data['userPswd'])){
-
         if(checkLogin($data)){
             $_SESSION['email'] = $data['email'];
             require 'view/home.php';
