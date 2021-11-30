@@ -14,14 +14,16 @@ $title = "SnowPoint . articles";
 
 
 <!-- Product -->
-<div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+    <div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+
+        <div class="row">
 
         <?php
             foreach ($articles as $art){?>
 
+            <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
                 <!-- Block2 -->
-        <div class="block2">
+            <div class="block2">
             <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
                 <img src="<?php echo $art["photo"] ?>" alt="IMG-PRODUCT">
 
@@ -50,9 +52,16 @@ $title = "SnowPoint . articles";
                 </span>
             </div>
         </div>
+            </div>
 
 
         <?php }  ?>
 
 
     </div>
+    </div>
+
+
+<?php
+$content = ob_get_clean();
+require "gabarit.php";
