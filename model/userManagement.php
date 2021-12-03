@@ -12,8 +12,6 @@ require "dbConnector.php";
 function checkLogin($data){
 
     $userEmailAddress = $data['email'];
-    $userHashPsw = $data['userPswd'];
-
     /*
     $query="SELECT userEmailAddress FROM users WHERE userEmailAddress=:femail and userHashPsw = :fpwd ";
     $params = array(':femail' => $userEmailAddress, ':fpwd' => $userHashPsw);

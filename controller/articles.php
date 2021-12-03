@@ -7,7 +7,6 @@
  * @version   30.11.2021
  */
 
-
 require "model/articlesManager.php";
 
 function displayArticles(){

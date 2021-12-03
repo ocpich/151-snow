@@ -49,12 +49,11 @@ $title = "SnowPoint . articles";
                     </div>
 
                     <div class="block2-txt p-t-20">
-                        <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                        <a href="index.php?action=displayArticlesDetail&id= <?php echo $art["id"]?>" class="block2-name dis-block s-text3 p-b-5">
                             <?php echo $art['brand']. " " .$art["model"] ?>
                         </a>
 
                         <span class="block2-price m-text6 p-r-5">
-
 
                             CHF <?php  echo number_format( $art["price"],2) ?>
                         </span>
