@@ -30,6 +30,23 @@ function login($data){
     }
 }
 
+function signup($data){
+
+    if(isset($data['emailSignup']) && isset($data['pwdSignUp'])){
+        if(register($data)){
+            require 'view/login.php';
+
+        }else{
+            $errorMessage = "Email déjà utilisé";
+            require 'view/signup.php';
+        }
+
+    }else{
+
+        require 'view/signup.php';
+    }
+}
+
 function logout(){
     session_destroy();
     $_SESSION = array();

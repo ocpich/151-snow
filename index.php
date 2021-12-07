@@ -29,6 +29,9 @@ if (isset($_GET['action'])) {
         case 'login':
             login($_POST);
             break;
+        case 'signup':
+            signup($_POST);
+            break;
         case 'articles':
             displayArticles();
             break;

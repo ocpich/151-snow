@@ -98,7 +98,8 @@
                             echo '<li><a href="index.php?action=logout">Logout</a></li>';
 
                         }else{
-                            echo '<li><a href="index.php?action=login">Login</a></li>';
+                            echo '<li><a href="index.php?action=login">Login</a></li>
+                            <li><a href="index.php?action=signup">S\'enregistrer</a></li>';
                         }
                         ?>
 
@@ -181,7 +182,8 @@
                     <li class="item-menu-mobile"><a href="index.php?action=logout">Logout</a></li>';
 
                 }else{
-                    echo '<li class="item-menu-mobile"><a href="index.php?action=login">Login</a></li>';
+                    echo '<li class="item-menu-mobile"><a href="index.php?action=login">Login</a></li>
+                    <li class="item-menu-mobile"><a href="index.php?action=signup">S\'enregistrer</a></li>';
                 }
                 ?>
 

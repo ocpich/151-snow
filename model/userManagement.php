@@ -9,6 +9,43 @@
 
 require "dbConnector.php";
 
+
+function register($data){
+
+    if(isAlreadyInDB($data)){
+        return 0;
+    }else{
+
+        $userEmailAddress = $data['emailSignup'];
+        $userHashPsw = password_hash($data['pwdSignUp'],PASSWORD_DEFAULT);
+
+        //$queryInsert = "INSERT INTO users (userEmailAddress,userHashPsw) values (userEmailAddress=:femail,userHashPsw=:fpwd)";
+        //$param = array(':femail' => $userEmailAddress,':fpwd' => $userHashPsw);
+
+        $queryInsert = "INSERT INTO users (userEmailAddress,userHashPsw) values (:femail,:fpwd)";
+        $param = array(':femail' => $userEmailAddress,':fpwd' => $userHashPsw);
+
+        executeQueryInsert($queryInsert,$param);
+        return 1;
+    }
+
+
+}
+
+function isAlreadyInDB($data){
+
+    $email = $data['emailSignup'];
+    $query = "select * from users where userEmailAddress=:femail";
+    $params = array(':femail'=> $email);
+
+    if(executeQuerySelect($query,$params) != null) {
+        return 1;
+    }else{
+        return 0;
+    }
+
+}
+
 function checkLogin($data){
 
     $userEmailAddress = $data['email'];
