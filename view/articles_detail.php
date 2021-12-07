@@ -18,11 +18,14 @@ $title = "SnowPoint . article details";
             <div class="w-size13 p-t-30 respon5">
                 <div class="wrap-slick3 flex-sb flex-w">
                     <div class="wrap-pic-w">
+
+                        <?php
+
+                        $fileLoc = dirname($articleInfos[0]['photo']); ?>
+
                         <img src="<?php
 
-                        $fileLoc = dirname($articleInfos[0]['photo']);
-
-                        echo $$fileLoc.$articleInfos[0]['code'].".jpg"?>" alt="IMG-PRODUCT">
+                        echo $fileLoc."/".$articleInfos[0]['code'].".jpg"?>" alt="IMG-PRODUCT">
                     </div>
                 </div>
             </div>
