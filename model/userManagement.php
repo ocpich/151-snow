@@ -54,7 +54,7 @@ function checkLogin($data){
     $params = array(':femail' => $userEmailAddress, ':fpwd' => $userHashPsw);
     */
 
-    $query="SELECT userHashPsw FROM users WHERE userEmailAddress=:femail ";
+    $query="SELECT userHashPsw,isAdmin FROM users WHERE userEmailAddress=:femail ";
     $params = array(':femail' => $userEmailAddress);
 
     $dataDB = executeQuerySelect($query,$params);
@@ -64,6 +64,9 @@ function checkLogin($data){
         foreach ($dataDB as $key => $tab){
             foreach ($tab as $key2 => $pw){
                 if(password_verify( $data['userPswd'],$pw)){
+
+                    $_SESSION['admin'] = $tab['isAdmin'];
+
                     return true;
                 }else{
                     return false;

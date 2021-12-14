@@ -26,6 +26,9 @@ if (isset($_GET['action'])) {
         case 'displayArticlesDetail':
             displayArticlesDetail($_GET);
             break;
+        case 'gestion':
+            displayArticlesAdmin();
+            break;
         case 'login':
             login($_POST);
             break;
@@ -35,8 +38,14 @@ if (isset($_GET['action'])) {
         case 'articles':
             displayArticles();
             break;
+        case 'addArticle':
+            addArticle($_POST);
+            break;
         case 'logout':
             logout();
+            break;
+        case 'deleteArticle':
+            deleteArticle($_GET['id']);
             break;
         default :
             lost();

@@ -17,6 +17,7 @@ function login($data){
     if(isset($data['email']) && isset($data['userPswd'])){
         if(checkLogin($data)){
             $_SESSION['email'] = $data['email'];
+
             require 'view/home.php';
 
         }else{
