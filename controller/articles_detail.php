@@ -14,3 +14,9 @@ function displayArticlesDetail($articleId){
 
     require "view/articles_detail.php";
 }
+
+function displayArticleAdmin($articleId){
+    $articleInfos = findArticleWithId($articleId['id']);
+
+    require "view/modifyArticle.php";
+}

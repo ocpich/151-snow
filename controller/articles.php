@@ -48,3 +48,26 @@ function addArticle($articleDetail){
     }
 
 }
+
+
+
+function modifyArticle($articleDetail){
+
+    if(isset($articleDetail['code']) && isset($articleDetail['brand']) && isset($articleDetail['model']) && isset($articleDetail['snowLength'])
+        && isset($articleDetail['audience']) && isset($articleDetail['qtyAvailable'])
+        && isset($articleDetail['description'] ) && isset($articleDetail['price'])
+        &&  isset($articleDetail['descriptionFull']) && isset($articleDetail['level'])){
+        if(addArticleInDB($articleDetail)){
+            header("Location: " . 'index.php?action=gestion');
+
+        }else{
+            $errorMessage = "Manque un élément";
+            require 'view/modifyArticle.php';
+        }
+
+    }else{
+
+        require 'view/modifyArticle.php';
+    }
+
+}

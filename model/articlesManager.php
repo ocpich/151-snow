@@ -100,3 +100,4 @@ values (:fcode,:fbrand,:fmodel,:fsno,:faud,:fqty,:fdesc,:fprice,:fdescFull,:flev
     return 1;
 
 }
+

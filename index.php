@@ -41,6 +41,12 @@ if (isset($_GET['action'])) {
         case 'addArticle':
             addArticle($_POST);
             break;
+        case 'displayArticlesAdmin':
+            displayArticleAdmin($_GET);;
+            break;
+        case 'modifyArticle':
+            modifyArticle($_POST);
+            break;
         case 'logout':
             logout();
             break;

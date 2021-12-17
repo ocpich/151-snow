@@ -60,9 +60,11 @@ $title = "SnowPoint . gestion";
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </input>
                             </a>
-                            <button class="btn-num-product-up flex-c-m size7 ">
+                            <a href="index.php?action=displayArticlesAdmin&id=<?php echo$articl["id"]?>">
+                            <input class="btn-num-product-up flex-c-m size7 ">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
-                            </button>
+                            </input>
+                            </a>
                         </td>
                     </tr>
             <?php }  ?>
