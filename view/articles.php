@@ -31,7 +31,11 @@ $title = "SnowPoint . articles";
                     <!-- Block2 -->
                 <div class="block2">
                     <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                        <img src="<?php echo $art["photo"] ?>" alt="IMG-PRODUCT">
+
+                        <?php if(is_file($art["photo"])){
+                            echo '<img src="'. $art["photo"] .'" alt="IMG-PRODUCT">';
+                        }
+                        ?>
 
                         <div class="block2-overlay trans-0-4">
                             <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
