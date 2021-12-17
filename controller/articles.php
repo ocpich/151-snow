@@ -51,13 +51,13 @@ function addArticle($articleDetail){
 
 
 
-function modifyArticle($articleDetail){
+function modifyArticle($articleInfos){
 
-    if(isset($articleDetail['code']) && isset($articleDetail['brand']) && isset($articleDetail['model']) && isset($articleDetail['snowLength'])
-        && isset($articleDetail['audience']) && isset($articleDetail['qtyAvailable'])
-        && isset($articleDetail['description'] ) && isset($articleDetail['price'])
-        &&  isset($articleDetail['descriptionFull']) && isset($articleDetail['level'])){
-        if(addArticleInDB($articleDetail)){
+    if(isset($articleInfos['code']) && isset($articleInfos['brand']) && isset($articleInfos['model']) && isset($articleInfos['snowLength'])
+        && isset($articleInfos['audience']) && isset($articleInfos['qtyAvailable'])
+        && isset($articleInfos['description'] ) && isset($articleInfos['price'])
+        &&  isset($articleInfos['descriptionFull']) && isset($articleInfos['level'])){
+        if(addArticleInDB($articleInfos)){
             header("Location: " . 'index.php?action=gestion');
 
         }else{

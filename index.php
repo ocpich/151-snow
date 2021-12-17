@@ -42,7 +42,7 @@ if (isset($_GET['action'])) {
             addArticle($_POST);
             break;
         case 'displayArticlesAdmin':
-            displayArticleAdmin($_GET);;
+            displayArticleAdmin($_GET);
             break;
         case 'modifyArticle':
             modifyArticle($_POST);

@@ -80,8 +80,8 @@ $title = "SnowPoint . gestion";
 
                 <div class="size14 trans-0-4 m-b-10">
 
-                    <input type="submit" value="Modifier" class="flex-c-m  bg4 bo-rad-23 hov1 m-text3 trans-0-4"><br>
-                    <a href="index.php?action=gestion"><input value="annuler" class="flex-c-m  bg4 bo-rad-23 hov1 m-text3 trans-0-4"></a>
+                    <a href="index.php?action=modifyArticle&<?php echo $articleInfos[0]['id'] ?>"><input type="submit" value="Modifier" class="flex-c-m  bg4 bo-rad-23 hov1 m-text3 trans-0-4"></a><br>
+                    <input value="annuler" class="flex-c-m  bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                 </div>
             </form>
 
