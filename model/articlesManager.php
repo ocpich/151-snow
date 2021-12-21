@@ -101,3 +101,27 @@ values (:fcode,:fbrand,:fmodel,:fsno,:faud,:fqty,:fdesc,:fprice,:fdescFull,:flev
 
 }
 
+function updateArticleInDB($details){
+
+    $code = $details['code'];
+    $brand = $details['brand'];
+    $model = $details['model'];
+    $snow = $details['snowLength'];
+    $audience = $details['audience'];
+    $qty = $details['qtyAvailable'];
+    $description = $details['description'];
+    $price = $details['price'];
+    $descriptionFull = $details['descriptionFull'];
+    $level = $details['level'];
+    //$photo = $details['photo'];
+    $active = 1;
+
+    $queryInsert = "UPDATE snows SET brand=:fbrand,model=:fmodel,snowLength=:fsno,audience=:faud,qtyAvailable=:fqty,description=:fdesc,price=:fprice,descriptionFull=:fdescFull,level=:flevel,active=:factive WHERE code=:fcode";
+    $param = array(':fbrand' => $brand,':fmodel' => $model,':fsno' => $snow,':faud' => $audience, ':fqty' => $qty, ':fdesc' => $description,':fprice' => $price,
+        ':fdescFull' => $descriptionFull,':flevel' => $level,':factive' => $active,':fcode' => $code);
+
+    executeQueryInsert($queryInsert,$param);
+    return 1;
+
+}
+

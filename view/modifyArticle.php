@@ -23,57 +23,58 @@ $title = "SnowPoint . gestion";
 
             <form method="post" action="index.php?action=modifyArticle">
 
-                <span class="s-text18 w-size19 w-full-sm">Modification d'article</span>
+                <span class="s-text18 w-size19 w-full-sm">Modification d'article </span>
 
 
                 <div class="size13 bo4 m-b-12">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="code" placeholder="<?php echo $articleInfos[0]['code']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="code" value="<?php echo $articleInfos[0]['code']?>" readonly="readonly">
                 </div>
 
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="brand" placeholder="<?php echo $articleInfos[0]['brand']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="brand" value="<?php echo $articleInfos[0]['brand']?>">
                 </div>
 
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="model" placeholder="<?php echo $articleInfos[0]['model']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="model" value="<?php echo $articleInfos[0]['model']?>">
                 </div>
 
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="snowLength" placeholder="<?php echo $articleInfos[0]['snowLength']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="snowLength" value="<?php echo $articleInfos[0]['snowLength']?>">
                 </div>
 
 
                 <div class="rs2-select2 rs3-select2 rs4-select2 bo4 of-hidden w-size21 m-t-8 m-b-12">
-                    Pour qui ?
-                    <select class="selection-2" name="<?php echo $articleInfos[0]['audience']?>">
-                        <option>Homme</option>
-                        <option>Femme</option>
-                        <option>Mixte</option>
+                    <label for="audience">Pour qui:</label>
+                    <select class="selection-2" name="audience">
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                        <option value="Mixte">Mixte</option>
                     </select>
+
                 </div>
 
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="qtyAvailable" placeholder="<?php echo $articleInfos[0]['qtyAvailable']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="qtyAvailable" value="<?php echo $articleInfos[0]['qtyAvailable']?>">
                 </div>
 
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="description" placeholder="<?php echo $articleInfos[0]['description']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="description" value="<?php echo $articleInfos[0]['description']?>">
                 </div>
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="price" placeholder="<?php echo $articleInfos[0]['price']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="price" value="<?php echo $articleInfos[0]['price']?>">
                 </div>
 
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="descriptionFull" placeholder="<?php echo $articleInfos[0]['descriptionFull']?>">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="descriptionFull" value="<?php echo $articleInfos[0]['descriptionFull']?>">
                 </div>
 
                 <div class="rs2-select2 rs3-select2 rs4-select2 bo4 of-hidden w-size21 m-t-8 m-b-12">
-                    Quel niveau ?
-                    <select class="selection-2" name="<?php echo $articleInfos[0]['level']?>">
-                        <option>Pro</option>
-                        <option>Standart</option>
-                        <option>Débutant</option>
-                        <option>Intermédiaire</option>
+                    <label for="level">Quel niveau ?</label>
+                    <select class="selection-2" name="level">
+                        <option value="Pro">Pro</option>
+                        <option value="Standart">Standart</option>
+                        <option value="Débutant">Débutant</option>
+                        <option value="Intermédiaire">Intermédiaire</option>
                     </select>
                 </div>
 
@@ -81,7 +82,7 @@ $title = "SnowPoint . gestion";
                 <div class="size14 trans-0-4 m-b-10">
 
                     <a href="index.php?action=modifyArticle&<?php echo $articleInfos[0]['id'] ?>"><input type="submit" value="Modifier" class="flex-c-m  bg4 bo-rad-23 hov1 m-text3 trans-0-4"></a><br>
-                    <input value="annuler" class="flex-c-m  bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                    <a href="index.php?action=gestion"><input value="annuler" class="flex-c-m  bg4 bo-rad-23 hov1 m-text3 trans-0-4"></a>
                 </div>
             </form>
 
