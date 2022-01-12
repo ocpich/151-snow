@@ -8,6 +8,8 @@
  */
 
 require "model/articlesManager.php";
+require_once('Cart.php');
+require_once('CartItem.php');
 
 function displayArticles(){
     $articles = getArticles();
@@ -19,6 +21,27 @@ function displayArticles(){
 function displayArticlesAdmin(){
     $articlesAdmin = getArticles();
     require "view/articlesAdmin.php";
+
+}
+
+
+function addToCart($infos){
+
+    if($_SESSION['cart']==null){
+        $_SESSION['cart'] = new Cart();
+    }
+
+    $qty= $infos['qty'];
+
+    $articl = findArticleWithId($infos['id']);
+
+
+    $cartItem = new CartItem($articl[0]['id'],$qty);
+    $cartItem->SetAttributes($articl[0]['description'],$articl[0]['photo'],$articl[0]['price']);
+
+    $_SESSION['cart']->AddItemInCart($cartItem);
+
+    require "view/cartView.php";
 
 }
 

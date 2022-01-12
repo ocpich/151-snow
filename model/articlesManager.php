@@ -87,6 +87,10 @@ function addArticleInDB($details){
     $price = $details['price'];
     $descriptionFull = $details['descriptionFull'];
     $level = $details['level'];
+
+    //$target_dir = "view/content/images/";
+    //$target_file = $target_dir . basename($_FILES["imageUpload"]["name"]);
+
     $photo = $details['photo'];
     $active = 1;
 

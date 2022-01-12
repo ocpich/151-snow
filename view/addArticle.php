@@ -78,7 +78,7 @@ $title = "SnowPoint . gestion";
                 </div>
 
                 <div class="size13 bo4 m-b-22">
-                    <input class="sizefull s-text7 p-l-15 p-r-15" type="file" accept=".image/jpeg,.image/png" size="1000" name="photo" placeholder="Photo">
+                    <input class="sizefull s-text7 p-l-15 p-r-15" type="file" accept=".image/jpg,.image/png" size="1000" name="photo" placeholder="Photo">
                 </div>
 
                 <div class="size14 trans-0-4 m-b-10">

@@ -41,6 +41,9 @@ if (isset($_GET['action'])) {
         case 'addArticle':
             addArticle($_POST);
             break;
+        case 'addToCart':
+            addToCart(($_GET));
+            break;
         case 'displayArticlesAdmin':
             displayArticleAdmin($_GET);
             break;
