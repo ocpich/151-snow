@@ -27,7 +27,7 @@ function displayArticlesAdmin(){
 
 function addToCart($infos){
 
-    if($_SESSION['cart']==null){
+    if(!isset($_SESSION['cart'])){
         $_SESSION['cart'] = new Cart();
     }
 
@@ -40,6 +40,7 @@ function addToCart($infos){
     $cartItem->SetAttributes($articl[0]['description'],$articl[0]['photo'],$articl[0]['price']);
 
     $_SESSION['cart']->AddItemInCart($cartItem);
+    $items = $_SESSION['cart']->GetItems();
 
     require "view/cartView.php";
 

@@ -9,6 +9,7 @@
  * @version   26-MAR-2021
  */
 
+
 session_start();
 
 require "controller/navigation.php";

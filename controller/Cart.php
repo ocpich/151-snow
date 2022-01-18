@@ -67,7 +67,7 @@ class Cart
             //this is a new article to add
             //require "articlesManager.php"; //FAO renamed findArticleWithId
             $itemsAttributes = findArticleWithId($cartItemToAdd->GetArticleId());
-            $cartItemToAdd->SetAttributes($itemsAttributes['description'], $itemsAttributes['photo'], $itemsAttributes['price']);
+            $cartItemToAdd->SetAttributes($itemsAttributes[0]['description'], $itemsAttributes[0]['photo'], $itemsAttributes[0]['price']);
             $this->items[] = $cartItemToAdd;
 
         }

@@ -34,18 +34,18 @@ $title = "SnowPoint . cart";
                         </tr>
 
                         <?php
-                        $_SESSION['cart']->GetItems();
-                        foreach ($items as $CartItem) { ?>
+
+                        foreach ($items as $it) { ?>
 
                         <tr class="table-row">
-                            <td class="column-1"><?php echo $items['code']?></td>
+                            <td class="column-1"><?php print_r($it->GetArticleId())?></td>
                             <td class="column-2">
                                 <div class="cart-img-product b-rad-4 o-f-hidden">
-                                    <img src="<?php echo $items['photo']?>" alt="IMG-PRODUCT">
+                                    <img src="<?php print_r($it->GetImgPath())?>" alt="IMG-PRODUCT">
                                 </div>
                             </td>
 
-                            <td class="column-3"><?php echo $items['price']?></td>
+                            <td class="column-3"><?php echo $it->GetPrice()?></td>
                             <td class="column-4">
                                 <div class="flex-w bo5 of-hidden w-size17">
                                     <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
@@ -59,7 +59,7 @@ $title = "SnowPoint . cart";
                                     </button>
                                 </div>
                             </td>
-                            <td class="column-5"><?php echo $items['price']?></td>
+                            <td class="column-5"><?php echo $it->GetTotalPrice()?></td>
                         </tr>
                     <?php } ?>
 
@@ -96,7 +96,7 @@ $title = "SnowPoint . cart";
 					</span>
 
                     <span class="m-text21 w-size20 w-full-sm">
-						<?php echo $items['price']?>
+						<?php echo $it->GetTotalPrice()?>
 					</span>
                 </div>
 
@@ -108,7 +108,7 @@ $title = "SnowPoint . cart";
 					</span>
 
                     <span class="m-text21 w-size20 w-full-sm">
-						<?php echo $items['price']?>
+						<?php echo $it->GetTotalPrice()?>
 					</span>
                 </div>
 
